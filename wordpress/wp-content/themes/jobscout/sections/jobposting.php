@@ -19,7 +19,9 @@ if ( $ed_jobposting && jobscout_is_wp_job_manager_activated() && $job_title  ) {
                     <div class="row">
                         <div class="col-md-12">
                             <?php echo do_shortcode('[jobs show_filters="false" post_status="publish"]'); ?>
-                            <div class="btn-wrap div-job-view" ><a id="btn-job-view"  href="http://localhost:8080/CMS/wordpress/jobs/" class="btn">VIEW MORE JOBS</a></div>
+                            <div class="btn-wrap div-job-view" >
+                                <a id="btn-job-view"  href="http://localhost:8080/CMS/wordpress/jobs/" class="btn">VIEW MORE JOBS</a>
+                            </div>
                         </div>
                     </div>
                 <?php } 

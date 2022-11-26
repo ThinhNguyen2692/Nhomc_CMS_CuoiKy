@@ -29,11 +29,11 @@ $company_name = get_post_meta( get_the_ID(), '_company_name', true );
 	</figure>
 
 	<div class="job-title-wrap">
-		<div class="item-job-title">
+		
 		<h3 class="entry-title">
 			<a href="<?php the_job_permalink(); ?>"><?php wpjm_the_job_title(); ?></a>
 		</h3>
-		</div>
+		
 		<?php if( $company_name ){ ?>
 			<div class="company-name" id="time-date">
 			<?php the_job_publish_date(); ?>
@@ -78,38 +78,30 @@ $company_name = get_post_meta( get_the_ID(), '_company_name', true );
 		</div>		
 	</div>
 			
-
+<div class="item-content">
 <?php
 							if (is_search() || !is_singular() && 'summary' === get_theme_mod('blog_content', 'full')) {
 								the_excerpt();
 							} else {
 							 
 								$explode_description = explode("</p>",wpjm_get_the_job_description());
-								$text1 =  chop(substr($explode_description[0],0, 70), "</p>");
+								$text1 =  chop(substr($explode_description[0],0, 50), "</p>");
 								$text1 =  ltrim($text1, "<p>");
-								$text2 ="";
+								$text2 = "";
 								$text2 = trim($explode_description[1]);
-								$text2 =  ltrim(substr($text2,0, 70), "<p>");
+								$text2 =  ltrim(substr($text2,0, 50), "<p>");
 								$text2 =  chop($text2, "</p>");
-								$text3="";
-
+								$text3 = "";	
 								$text3 = trim($explode_description[2]);
-								$text3 =  ltrim(substr($text3,0, 70), "<p>");
-								$text3 =  chop($text3, "</p>");
-								
+								$text3 =  ltrim(substr($text,0, 50), "<p>");
+								$text3 =  chop($text2, "</p>");
 								if(strlen($text1) != 0){
-									$key = "item-text";
-									$item = "item-li";
-									echo "<ul><li>$text1</li> <li>$text2</li> <li>$text3</li>";
 									
+									 echo "<ul><li>$text1</li> <li>$text2</li> <li>$text3</li>";
 								}
-								
-								
-							
-								// the_content( __( 'Continue reading', 'twentytwenty' ) );s
 							}
 							?>
-
+</div>
 
 
 	<?php if( $job_featured ){ ?>
