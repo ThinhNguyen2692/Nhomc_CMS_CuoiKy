@@ -8165,13 +8165,24 @@ RESPONSIVE STYLESHEET
 svg.svg-inline--fa.fa-magnifying-glass {
   position: absolute;
   left: 271px;
-  top: 176px;
-
+  top: 174px;
   color: #ea741c;
 }
 svg.svg-inline--fa.fa-location-dot {
   position: absolute;
   top: 174px;
   color: #ea741c;
-  left: 675px;
+  left: 827px
+}
+input#search_keywords {
+  padding-left: 27px;
+}
+input#search_location {
+  padding-left: 25px;
+}
+.search_location {
+  max-width: 250px;
+}
+select#lang {
+  width: 220px;
 }
