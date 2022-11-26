@@ -765,7 +765,8 @@ function the_job_publish_date( $post = null ) {
 		$display_date = sprintf( esc_html__( 'Posted %s ago', 'wp-job-manager' ), human_time_diff( get_post_timestamp( $post ), time() ) );
 	}
 
-	echo '<time datetime="' . esc_attr( get_post_datetime( $post )->format( 'Y-m-d' ) ) . '">' . wp_kses_post( $display_date ) . '</time>';
+	//echo '<time datetime="' . esc_attr( get_post_datetime( $post )->format( 'Y-m-d' ) ) . '">' . wp_kses_post( $display_date ) . '</time>';
+	echo '<time datetime="' . esc_attr( get_post_datetime( $post )->format( 'Y-m-d' ) ) . '">' . esc_attr( get_post_datetime( $post )->format( 'Y-m-d' ) ) . '</time>';
 }
 
 

@@ -765,13 +765,16 @@ class WP_Job_Manager_Shortcodes {
 		 */
 		$data_attributes = apply_filters( 'job_manager_jobs_shortcode_data_attributes', $data_attributes, $atts );
 
+	
 		foreach ( $data_attributes as $key => $value ) {
+		
 			$data_attributes_string .= 'data-' . esc_attr( $key ) . '="' . esc_attr( $value ) . '" ';
+			
 		}
 
 		$job_listings_output = apply_filters( 'job_manager_job_listings_output', ob_get_clean() );
 
-		return '<div class="job_listings" ' . $data_attributes_string . '>' . $job_listings_output . '</div>';
+		return '<div class="job_listings danhsach" ' . $data_attributes_string . '>' . $job_listings_output . '</div>';
 	}
 
 	/**
