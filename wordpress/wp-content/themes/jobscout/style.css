@@ -588,7 +588,7 @@ hr {
   margin-top: 2em;
 }
 
-ul,
+
 ol {
   margin: 0 0 1.5em 3em;
 }
@@ -1163,6 +1163,7 @@ section[class*="-section"] .widget_text .widget-title,
   margin-bottom: 0;
   font-weight: 800;
   line-height: 1.5;
+  text-transform: uppercase;
 }
 
 section[class*="-section"] .widget_text .textwidget {
@@ -1207,7 +1208,7 @@ figure.post-thumbnail {
 }
 
 .entry-title a {
-  color: #000;
+  color: #000000b8;
   display: inline-block;
 }
 
@@ -1371,7 +1372,10 @@ form.search-form input.search-submit:focus {
 }
 
 .page-template-default figure.post-thumbnail {
-  margin-bottom: 30px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 210px;
+    height: 210px;
 }
 
 .page-template-default figure.post-thumbnail a.post-thumbnail {
@@ -2541,8 +2545,9 @@ section.category-section .widget_rrtc_icon_text_widget {
 TOP JOB SECTION
 =============================*/
 section.top-job-section {
-  background: #f5f5f7;
-  padding: 70px 0;
+  background: #f2f2f2;
+  padding-top: 70px;
+  padding-bottom: 20px;
 }
 
 section.top-job-section .section-title {
@@ -2560,10 +2565,10 @@ section.top-job-section .section-title {
   width: 48%;
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  margin-right: 2.5%;
-  margin-bottom: 3%;
+  margin-right: 1.8%;
+  margin-bottom: 1.8%;
   border-radius: 5px;
-  padding: 30px;
+  padding: 20px;
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -2627,7 +2632,7 @@ section.top-job-section .section-title {
 }
 
 .top-job-section .row div.job_listings article .entry-meta {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  /* border-top: 1px solid rgba(0, 0, 0, 0.1); */
   margin-top: 15px;
   padding-top: 15px;
   font-size: 1em;
@@ -2671,17 +2676,19 @@ section.top-job-section .section-title {
 .job-types li.job-type,
 .job_listing li.job-type {
   list-style: none;
-  font-size: 0.7778em;
+  font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700;
   display: inline-block;
-  border: 1px solid #2ace5e;
-  border-radius: 40px;
+  border-radius: 7px;
   padding: 5px 20px;
   color: #2ace5e;
   margin-top: 10px;
   cursor: default;
+  width: 380px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .job-manager li.freelance,
@@ -2900,38 +2907,53 @@ section[class*="-section"] .widget_raratheme_companion_cta_widget .right .button
 ARTICLE SECTION
 ===========================*/
 section.article-section {
-  margin: 70px 0;
   text-align: center;
 }
 
 .article-section .article-wrap {
+  box-sizing: inherit;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 30px;
   text-align: left;
-  margin-top: 50px;
+  margin-top: 30px;
   margin-bottom: 40px;
 }
 
+.test-blog {
+  background-color: #f2f2f2;
+  padding: 35px 0px;
+}
+
 .article-section .article-wrap article {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 2px 4px rgb(0 0 0 / 16%);
   border-radius: 5px;
-  /*overflow: hidden;*/
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  flex-wrap: wrap;
+  background: #fff;
+  padding: 20px;
 }
 
 .article-section .article-wrap article img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .article-section .article-wrap header.entry-header {
-  padding: 30px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 54%;
+  padding: 0 25px;
 }
 
 .article-section .article-wrap header.entry-header .entry-title {
   margin: 10px 0 0 0;
-  line-height: 1.5;
-  font-size: 1.112em;
-  font-weight: 700;
+  font-size: 1.1em;
+  font-weight: 840;
 }
 
 /*=========================
@@ -3245,9 +3267,21 @@ LIST VIEW
   width: 100%;
 }
 
+.blog-content{
+  line-height: 1.3 !important;
+  color: #666666e4;
+  font-weight: 615;
+  font-size: 14px;
+}
+
+.footer-blog{
+margin-top: -15px;
+}
+
 a.readmore-link {
-  font-size: 0.888em;
-  font-weight: 400;
+  color: #ef9451;
+  font-size: 0.82em;
+  font-weight: 800;
   text-transform: capitalize;
   display: inline-block;
 }
@@ -8166,26 +8200,16 @@ RESPONSIVE STYLESHEET
 }
 svg.svg-inline--fa.fa-magnifying-glass {
   position: absolute;
-  left: 271px;
-  top: 174px;
+  left: 270px;
+  top: 176px;
   color: #ea741c;
 }
 svg.svg-inline--fa.fa-location-dot {
   position: absolute;
-  top: 174px;
+  right: 658px;
+  top: 175px;
   color: #ea741c;
-  left: 783px;
-}
-input#search_keywords {
-  padding-left: 27px;
-}
-input#search_location {
-  padding-left: 25px;
 }
 .search_location {
-  max-width: 275px;
-  border-right:20px ;
-}
-select#lang {
-  width: 220px;
+  max-width: 250px;
 }
