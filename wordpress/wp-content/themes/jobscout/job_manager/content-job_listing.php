@@ -83,21 +83,17 @@ $company_name = get_post_meta( get_the_ID(), '_company_name', true );
 							if (is_search() || !is_singular() && 'summary' === get_theme_mod('blog_content', 'full')) {
 								the_excerpt();
 							} else {
-							 
 								$explode_description = explode("</p>",wpjm_get_the_job_description());
-								$text1 =  chop(substr($explode_description[0],0, 50), "</p>");
-								$text1 =  ltrim($text1, "<p>");
+								$text1 =  ltrim(chop(substr($explode_description[0],0, 70), "</p>"), "<p>");
 								$text2 = "";
 								$text2 = trim($explode_description[1]);
-								$text2 =  ltrim(substr($text2,0, 50), "<p>");
-								$text2 =  chop($text2, "</p>");
+								$text2 =  chop(ltrim(substr($text2,0, 70), "<p>"), "</p>");
 								$text3 = "";	
 								$text3 = trim($explode_description[2]);
-								$text3 =  ltrim(substr($text,0, 50), "<p>");
-								$text3 =  chop($text2, "</p>");
+								$text3 =  chop(ltrim(substr($text3,0, 70), "<p>"), "</p>");
+						
 								if(strlen($text1) != 0){
-									
-									 echo "<ul><li>$text1</li> <li>$text2</li> <li>$text3</li>";
+									 echo "<ul><li>$text1</li><li>$text2</li> <li>$text3</li>";
 								}
 							}
 							?>
