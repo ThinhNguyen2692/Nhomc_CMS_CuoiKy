@@ -2387,6 +2387,8 @@ SITE BANNER SECTION
 .banner-caption .jobscout_job_filters .search_submit {
   display: flex;
   /* flex: 0; */
+  padding-left: 20px;
+  background-color: hsl(210deg 5% 40% / 30%);
 }
 
 .banner-caption .form-wrap form .search_jobs label {
@@ -8172,7 +8174,7 @@ svg.svg-inline--fa.fa-location-dot {
   position: absolute;
   top: 174px;
   color: #ea741c;
-  left: 827px
+  left: 783px;
 }
 input#search_keywords {
   padding-left: 27px;
@@ -8181,7 +8183,8 @@ input#search_location {
   padding-left: 25px;
 }
 .search_location {
-  max-width: 250px;
+  max-width: 275px;
+  border-right:20px ;
 }
 select#lang {
   width: 220px;

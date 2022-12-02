@@ -39,18 +39,20 @@ if( $post_slug ){
       </div>
       
       <div class="search_location">
-        <label for="search_location"><?php esc_html_e( 'Location', 'jobscout' ); ?></label>
-         <!-- <input type="text"  id="search_location" name="search_location" placeholder="<?php esc_attr_e( 'Location', 'jobscout' ); ?>"> -->
-         <select name="languages" id="lang" >
-        <option value="javascript">US</option>
-        <option value="php">VIETNam</option>
-        <option value="java">Java</option>
-        <option value="golang">Golang</option>
-        <option value="python">Python</option>
-        <option value="c#">C#</option>
-        <option value="C++">C++</option>
-        <option value="erlang">Erlang</option>
+        <!-- <label for="search_location"><?php esc_html_e( 'Location', 'jobscout' ); ?></label> -->
+        <!-- <input type="text"  id="search_location" name="search_location" placeholder="<?php esc_attr_e( 'Location', 'jobscout' ); ?>">  -->
+        <select type="text"  id="search_location" name="search_location" placeholder="<?php esc_attr_e( 'Location', 'jobscout' ); ?>" >
+        <option value="US">US</option>
+        <option value="VIETNam">VIET NAM</option>
+        <option value="TOKYO">TOKYO</option>
+        <option value="THAILAN">THAILAN</option>
+        <option value="China">China</option>
+        <option value="India">India</option>
+        <option value="Indonesia">Indonesia</option>
+        <option value="U.K.">U.K.</option>
       </select>
+    
+
          <i class="fa fa-map-marker" aria-hidden="true"></i>
         </div>
       
