@@ -1,3 +1,10 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
 <?php
 /**
  *
@@ -24,15 +31,30 @@ if( $post_slug ){
   <form class="jobscout_job_filters" method="GET" action="<?php echo esc_url( $action_page ) ?>">
     <div class="search_jobs">
 
-      <div class="search_keywords">
+      <div class="search_keywords"> 
         <label for="search_keywords"><?php esc_html_e( 'Keywords', 'jobscout' ); ?></label>
-        <input type="text" id="search_keywords" name="search_keywords" placeholder="<?php esc_attr_e( 'Keywords', 'jobscout' ); ?>">
+        <input type="text" id="search_keywords" name="search_keywords" placeholder="<?php esc_attr_e( 'Search for jobs, companies, skills', 'jobscout' ); ?>">
+        <i class="fa fa-search" aria-hidden="true"></i>
+         
       </div>
-
+      
       <div class="search_location">
-        <label for="search_location"><?php esc_html_e( 'Location', 'jobscout' ); ?></label>
-        <input type="text"  id="search_location" name="search_location" placeholder="<?php esc_attr_e( 'Location', 'jobscout' ); ?>">
-      </div>
+        <!-- <label for="search_location"><?php esc_html_e( 'Location', 'jobscout' ); ?></label> -->
+        <!-- <input type="text"  id="search_location" name="search_location" placeholder="<?php esc_attr_e( 'Location', 'jobscout' ); ?>">  -->
+        <select type="text"  id="search_location" name="search_location" placeholder="<?php esc_attr_e( 'Location', 'jobscout' ); ?>" >
+        <option value="US">US</option>
+        <option value="VIETNam">VIET NAM</option>
+        <option value="TOKYO">TOKYO</option>
+        <option value="THAILAN">THAILAN</option>
+        <option value="China">China</option>
+        <option value="India">India</option>
+        <option value="Indonesia">Indonesia</option>
+        <option value="U.K.">U.K.</option>
+      </select>
+    
+
+         <i class="fa fa-map-marker" aria-hidden="true"></i>
+        </div>
       
       <?php if( $ed_job_category ){ ?>
           <div class="search_categories custom_search_categories">
@@ -47,10 +69,11 @@ if( $post_slug ){
       <?php } ?>
       
       <div class="search_submit">
-        <input type="submit" value="<?php esc_attr_e( 'Search', 'jobscout'); ?>" />
+     
+        <button type="submit" value="<?php esc_attr_e( 'Search', 'jobscout'); ?>">SEARCH JOB</button>
+       
       </div>
-
     </div>
   </form>
-
+  </div>
 </div>
